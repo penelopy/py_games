@@ -29,18 +29,18 @@ def run_game():
 			mouseClicked = False
 			while mouseClicked == False: 
 				
-				if y >= 600:
+				if y >= 570:
 					phase = 1
-				if y <= 0:
+				if y <= 30:
 					phase = 2
 				if phase == 1:
 					y -= move_y
 				if phase == 2: 
 					y += move_y
 
-				if x >= 900:
+				if x >= 870:
 					x_phase = 1
-				if x <= 0:
+				if x <= 30:
 					x_phase = 2
 				if x_phase == 1:
 					x -=move_x
@@ -48,8 +48,8 @@ def run_game():
 					x += move_x
 
 				screen.fill(GRAY)
-				pygame.draw.circle(screen, CYAN, (x, y), 40, 1)
-				pygame.time.wait(30)
+				pygame.draw.circle(screen, CYAN, (x, y), 40, 0)
+				pygame.time.wait(20)
 				pygame.display.update()
 
 				for event in pygame.event.get(): 
