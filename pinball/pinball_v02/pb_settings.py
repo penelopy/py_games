@@ -10,13 +10,13 @@ myfont = pygame.font.SysFont("Arial", font_size)
 
 # Set up the colors
 BLACK = ( 0, 0, 0)
-WHITE = (255, 255, 255)
-RED = (255, 0, 0)
-GREEN = (0, 153, 0)
-BLUE = (51, 51, 255)
-GRAY = (126, 126, 126) 
-CYAN = (  0, 255, 255)
-SLATE = (112, 128, 144)
+BROWN_GRAY = (85, 85, 75)
+
+CREAM = (242, 240, 220)
+SANDY = (239, 216, 191)
+PINK = (240, 176, 168)
+PINK_PURPLE = (175, 133, 144) 
+VIOLET = (121, 112, 130)
 
 
 game_in_progress = True
@@ -25,7 +25,7 @@ program_running = True
 
 text_display = " "
 
-# Define scoreboard box dimensions
+# Define side banner box dimensions
 left_col_x = 0
 left_col_y = 0
 left_col_width = 150
@@ -62,7 +62,7 @@ win_box_x = 750
 win_box_y = 400
 win_box_width = 75
 win_box_height = 75
-win_box_color = SLATE
+win_box_color = VIOLET
 
 # Define winner textbox dimensions
 text_box_x = 650

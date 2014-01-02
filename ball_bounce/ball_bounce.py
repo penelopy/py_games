@@ -1,7 +1,7 @@
 #started Dec 26
 
 import pygame, sys, random
-from settings import *
+from ball_settings import *
 from classes import *
 from pygame.locals import *
 
@@ -47,8 +47,9 @@ def run_game():
 				if x_phase == 2: 
 					x += move_x
 
-				screen.fill(GRAY)
-				pygame.draw.circle(screen, CYAN, (x, y), 40, 0)
+				screen.fill(BRICK)
+				pygame.draw.circle(screen, ROSE, (x, y), 40, 0)
+				pygame.draw.circle(screen, BLACK, (x + 1, y + 1), 40, 1)
 				pygame.time.wait(20)
 				pygame.display.update()
 

@@ -1,4 +1,4 @@
-from settings import *
+from pb_settings import *
 import pygame, sys, random
 pygame.init()
 

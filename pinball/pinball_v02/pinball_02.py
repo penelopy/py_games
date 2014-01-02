@@ -2,8 +2,8 @@
 #posted to github on Dec 29
 
 import pygame, sys, random
-from settings import *
-from classes import *
+from pb_settings import *
+from pb_classes import *
 from pygame.locals import *
 from Draw_Fixed_Obj import *
 
@@ -19,7 +19,7 @@ y_previous = 0
 
 def run_game(): 
 	pygame.init()
-	screen.fill(GREEN)
+	screen.fill(CREAM)
 	draw_fixed_objs()
 
 	pygame.display.set_caption('Pinball')
@@ -36,13 +36,12 @@ def run_game():
 			mouseClicked = False
 			while mouseClicked == False: 
 				
-				screen.fill(GREEN)
+				screen.fill(CREAM)
 				draw_fixed_objs()
 				move_pinball()
 				game_over()
 
 				pygame.draw.circle(screen, BLACK, (x, y), 20, 0)
-				pygame.draw.circle(screen, CYAN, (x, y), 21, 1)
 				# pygame.time.wait(30)
 				pygame.display.update()
 				look_for_quit()
@@ -118,7 +117,7 @@ def game_over():
 		move_y *= 0
 		move_x *= 0
 
-		win_box_color = BLUE	
+		win_box_color = PINK	
 
 		count = 0
 		while 1: 
@@ -127,18 +126,18 @@ def game_over():
 			remainder = count%10
 			print remainder
 			if remainder > 5: 
-				win_box_color = RED
+				win_box_color = CREAM
 			else: 
-				win_box_color = BLUE
+				win_box_color = PINK
 			game_over_text()
 			win_box = Rectangle(win_box_x, win_box_y, win_box_width, win_box_height, win_box_color)
 			win_box.display()
 			pygame.draw.circle(screen, BLACK, (win_box_x + win_box_width/2, win_box_y + win_box_height/2), 20, 0)
-			pygame.draw.circle(screen, CYAN, (win_box_x + win_box_width/2, win_box_y + win_box_height/2), 21, 1)
+			pygame.draw.circle(screen, BROWN_GRAY, (win_box_x + win_box_width/2, win_box_y + win_box_height/2), 21, 1)
 			pygame.display.update()	
 
 def game_over_text():
-	text_box = Rectangle(text_box_x, text_box_y, text_box_width, text_box_height, WHITE)
+	text_box = Rectangle(text_box_x, text_box_y, text_box_width, text_box_height, PINK)
 	text_box.display()
 	myfont = pygame.font.SysFont("Arial", 30)
 	label = myfont.render("You Win!!", 1, BLACK)
