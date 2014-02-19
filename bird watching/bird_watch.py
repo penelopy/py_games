@@ -2,6 +2,7 @@
 #posted to github on Dec 29
 
 import pygame, sys, random, math
+from math import sqrt
 from settings import *
 from classes import *
 from pygame.locals import *
@@ -31,14 +32,12 @@ def run_game():
 			# Wait for input
 			mouseClicked = False
 			while mouseClicked == False: 
-				
 				screen.fill(GREEN)
 				pygame.draw.rect(screen, SKY, (0, 0, screen_width, 525))
 				cat.draw()
 				bird.move()
 				bird.draw()
 				# barn.draw()
-
 
 
 				left_eye = Circle(245, 330, 14, WHITE)
@@ -50,15 +49,13 @@ def run_game():
 				left_pupil.x = 242
 				left_pupil.y = 330
 				left_pupil.radius = 2
-				left_pupil.calculate_position()
-
+				left_pupil.calculate_position()	
 
 				right_pupil = Pupil(bird, 358, 328)
 				right_pupil.x = 362
 				right_pupil.y = 333
 				right_pupil.radius = 10
 				right_pupil.calculate_position()
-
 
 				
 				# pygame.time.wait(30)
